@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body {
+            background-color: black;
+        }
+        .info-text {
+            color: white;
+            font-size: 15px;
+            position: absolute;
+            font-family: Turrican2;
+        }
+        @font-face {
+            font-family: "Turrican2";
+            src: url(res/turr.ttf) format("truetype");
+        }
+        #health-bar {
+            height: 15px;
+            left: 630px; top: 8px;
+        }
+    </style>
+</head>
+
+
+<body>
+    <img src="res/turrican.png" alt="" id="running-ss" style="display: none">
+    <img src="res/shoots.png" alt="" id="shoots-ss" style="display: none">
+    <img src="res/enemies.png" alt="" id="enemies-ss" style="display: none">
+    <img src="res/level.jpg" alt="" id="lvl-img" style="display: none">
+    <img src="res/blocks.png" alt="" id="blocks-ss" style="display: none">
+    <img src="res/pickups.png" alt="" id="pickup-ss" style="display: none">
+
+    <canvas id="canvas" width="800" height="600">
+        <audio src="res/shot.mp3" id="shot"></audio>
+
+    </canvas>
+    <div style="position: absolute; width: 800px; height: 90px">
+        <span class="info-text" style="left : 120px; top : 35px" id="lifes">03</span>
+        <span class="info-text" style="left : 215px; top : 45px" id="time">0000</span>
+        <span class="info-text" style="left : 370px; top : 40px" id="stars">03</span>
+        <span class="info-text" style="left : 560px; top : 30px" id="specials">03</span>
+        <div class="info-text" id="health-bar"
+             style="background-color: green;  width: 140px; ">
+
+        </div>
+        <span class="info-text" style="left : 630px; top : 35px; font-size: 20px" id="score">000000</span>
+        <img src="res/ui.png" alt="" style="width: 800px; height: 90px">
+    </div>
+
+
+
+</body>
+<script type="module" src="/src/Game.ts"></script>
+
+</html>
